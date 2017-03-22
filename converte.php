@@ -1,8 +1,8 @@
 <?php
 
 include("conecta.php");
-$name= "arquivo.txt";
-$fp = fopen("/home/u545902286/public_html/arquivo.txt", 'w');
+
+
 
 
 // x = 2121212121 aquele numero enorme, data em formato uinix
@@ -22,6 +22,6 @@ while ( $linha = mysqli_fetch_array($stid, MYSQL_BOTH)) {
 
 array_push( $dias_values, array( ( (int) strtotime( $row['evento']." - 3 hours" )*1000 ), (int)$value2 ) );
 
-fwrite($fp, json_encode($dias_values));
+echo json_encode($dias_values);
 
 ?>
